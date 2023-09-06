@@ -6,3 +6,8 @@
 *.bil
 *.hdr
 *.html
+*.fa
+# clark & clarkz-l database format
+*.ky
+*.lb
+*.sz
