@@ -62,7 +62,7 @@ cd ./${dd}
   do
   for jj in $conf
    do
-    gawk -f ../$parseclarkcsv -v nmin_kmer=$ii -v conf_thr=$jj $id.csv > $id"_nkmin"$ii"_conf"$jj".summary"
+    gawk -f $parseclarkcsv -v nmin_kmer=$ii -v conf_thr=$jj $id.csv > $id"_nkmin"$ii"_conf"$jj".summary"
    done
  done
 gzip ${id}.csv
