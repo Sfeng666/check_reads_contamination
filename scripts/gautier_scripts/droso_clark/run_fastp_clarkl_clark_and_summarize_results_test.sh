@@ -5,7 +5,7 @@
 
 fastp=/home/siyuan/biosoft/miniconda3/envs/check_sp_contaminant/bin/fastp
 clark=/home/siyuan/biosoft/miniconda3/envs/check_sp_contaminant/bin/CLARK
-clarkl=home/siyuan/biosoft/miniconda3/envs/check_sp_contaminant/bin/CLARK-l
+clarkl=/home/siyuan/biosoft/miniconda3/envs/check_sp_contaminant/bin/CLARK-l
 parseclarkcsv=summary_csv.awk #summary_csv.awk
 
 dirfq=../../../data #assumed to be coded as ${id}.fq_1.gz and ${id}.fq_2.gz for read1 and read2 data
