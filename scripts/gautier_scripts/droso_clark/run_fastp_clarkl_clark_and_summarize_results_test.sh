@@ -11,41 +11,41 @@ parseclarkcsv=summary_csv.awk #summary_csv.awk
 dirfq=../../../data #assumed to be coded as ${id}.fq_1.gz and ${id}.fq_2.gz for read1 and read2 data
 id=$1 #ID prefix to provide when launching the shel script
 
-mkdir -p res_clarkl #create a directory named res_clarkl (if it doesn't exist) to store calrkl result
-mkdir -p res_clark  #create a directory named res_clark (if it doesn't exist) to store calrk result
+# mkdir -p res_clarkl #create a directory named res_clarkl (if it doesn't exist) to store calrkl result
+# mkdir -p res_clark  #create a directory named res_clark (if it doesn't exist) to store calrk result
 
-date
+# date
 
-####################
-#cleanning seqeunce: stdout option to obtain interleaved format further transformed into fasta using awk one liner
-####################
+# ####################
+# #cleanning seqeunce: stdout option to obtain interleaved format further transformed into fasta using awk one liner
+# ####################
 
-$fastp -i $dirfq"/"$id'.fq_1.gz' -I $dirfq"/"$id'.fq_2.gz' --stdout --merge --include_unmerged -h $id'.html' -j $id'.json' | awk '{if(NR%4==2){nn++;{print ">s"nn"\n"$0}}}' - > $dirfq"/"$id'.fasta'
+# $fastp -i $dirfq"/"$id'.fq_1.gz' -I $dirfq"/"$id'.fq_2.gz' --stdout --merge --include_unmerged -h $id'.html' -j $id'.json' | awk '{if(NR%4==2){nn++;{print ">s"nn"\n"$0}}}' - > $dirfq"/"$id'.fasta'
 
-date
+# date
 
-######################
-##CLARK-l analysis
-####################
+# ######################
+# ##CLARK-l analysis
+# ####################
 
-$clarkl -T target_clean.txt -D ./droso_clean_db -O $dirfq"/"$id'.fasta' -R $id -n 1 -m 0 -s 2
+# $clarkl -T target_clean.txt -D ./droso_clean_db -O $dirfq"/"$id'.fasta' -R $id -n 1 -m 0 -s 2
 
-date
+# date
 
-mv ${id}.csv res_clarkl/
+# mv ${id}.csv res_clarkl/
 
 
-######################
-##CLARK analysis
-####################
+# ######################
+# ##CLARK analysis
+# ####################
 
-$clark -T target_clean.txt -D ./droso_clean_db -O $dirfq"/"$id'.fasta' -R $id -n 1 -m 0 -s 2
+# $clark -T target_clean.txt -D ./droso_clean_db -O $dirfq"/"$id'.fasta' -R $id -n 1 -m 0 -s 2
 
-date
+# date
 
-mv ${id}.csv res_clark/
+# mv ${id}.csv res_clark/
 
-rm $dirfq"/"$id'.fasta'
+# rm $dirfq"/"$id'.fasta'
 
 ###########
 ###summarize statistics (using awk script)
@@ -62,7 +62,7 @@ cd ./${dd}
   do
   for jj in $conf
    do
-    gawk -f $parseclarkcsv -v nmin_kmer=$ii -v conf_thr=$jj $id.csv > $id"_nkmin"$ii"_conf"$jj".summary"
+    gawk -f ../$parseclarkcsv -v nmin_kmer=$ii -v conf_thr=$jj $id.csv > $id"_nkmin"$ii"_conf"$jj".summary"
    done
  done
 gzip ${id}.csv
