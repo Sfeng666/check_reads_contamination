@@ -1,9 +1,12 @@
 #!/bin/bash
 
-sample=CN-Nin   # sample name
+sample=$1   # sample name
 path_data=../data    # path to the data directory
 
-# extract the realigned bam file from a big tar.zip file using tar
+# download the tar.zip archive containing the realigned bam from CHTC
+scp chtcb:/staging/sfeng77/test_pipeline/out/05realign_$sample\.tar.gz $path_data
+
+# extract the realigned bam file from the big tar.zip file using tar
 tar_realign=$path_data/05realign_$sample.tar.gz # the tar file containing the realigned bam file
 name_bam=$sample\_sort_merge_dedup_indel.bam    # name (assumed also be the path within tar.gz archive) of the bam file to extract
 path_bam=$path_data/$name_bam   # path that the bam file is extracted to
