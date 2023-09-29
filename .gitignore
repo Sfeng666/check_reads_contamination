@@ -1,6 +1,6 @@
 *.tif
 *.pdf
-*.txt
+# *.txt
 *.gz
 *.log
 *.bil
