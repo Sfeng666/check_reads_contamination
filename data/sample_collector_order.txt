@@ -1,0 +1,30 @@
+Sample name	Collector
+CN-Shi	"Olazcuaga et al., 2020"
+CN-Bei	"Olazcuaga et al., 2020"
+CN-Nin	"Olazcuaga et al., 2020"
+CN-Lia	"Olazcuaga et al., 2020"
+JP-Kan	Masahito Kimura
+JP-Tok	"Olazcuaga et al., 2020"
+JP-Sap2	Masahito Kimura
+JP-Sap	"Olazcuaga et al., 2020"
+US-Haw	"Olazcuaga et al., 2020"
+US-Sok	"Olazcuaga et al., 2020"
+US-Wat	"Olazcuaga et al., 2020"
+US-CAOx	Samuel DeGrey
+US-Sdi	"Olazcuaga et al., 2020"
+US-Col	"Olazcuaga et al., 2020"
+US-Wis	"Olazcuaga et al., 2020"
+US-Wis2	Samuel DeGrey
+US-Nca	"Olazcuaga et al., 2020"
+BR-Pal	"Olazcuaga et al., 2020"
+ES-Bar	"Olazcuaga et al., 2020"
+FR-Par	"Olazcuaga et al., 2020"
+FR-Lez2	"Unknown, sent by Arnaud Estoup"
+FR-Lez	"Olazcuaga et al., 2020"
+DE-Dos	"Olazcuaga et al., 2020"
+FR-Cor	"Olazcuaga et al., 2020"
+IT-Tre2	"Unknown, sent by Arnaud Estoup"
+IT-Tre	"Olazcuaga et al., 2020"
+DE-Jen2	"Unknown, sent by Arnaud Estoup"
+DE-Jen	"Olazcuaga et al., 2020"
+FR-Run	"Olazcuaga et al., 2020"

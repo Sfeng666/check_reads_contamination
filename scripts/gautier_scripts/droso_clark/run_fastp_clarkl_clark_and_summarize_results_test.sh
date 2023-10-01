@@ -15,7 +15,7 @@ mkdir -p res_clarkl #create a directory named res_clarkl (if it doesn't exist) t
 mkdir -p res_clark  #create a directory named res_clark (if it doesn't exist) to store calrk result
 
 # Check if the analysis has already been done for this sample, and skip the analysis if it has.
-if [ ! -e "$id.html" ]; then
+if [ ! -e "res_clark/$id.csv.gz" ]; then
   date
 
   ####################
