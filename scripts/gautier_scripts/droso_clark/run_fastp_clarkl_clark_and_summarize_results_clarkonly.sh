@@ -47,7 +47,7 @@ if [ ! -e "res_clark/$id.csv.gz" ]; then
 
   mv ${id}.csv res_clark/
 
-  rm $dirfq"/"$id'.fasta'
+  # rm $dirfq"/"$id'.fasta'
 
   ###########
   ###summarize statistics (using awk script)
