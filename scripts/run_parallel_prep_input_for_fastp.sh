@@ -9,7 +9,7 @@ echo -e "### Download of tar.gz files starts at $(date) ###\n" >> $log
 
 { time cat $sample_names \
 | tr '\t' '\n' \
-| parallel --no-notice -j 0 --memfree 200G \
+| parallel --no-notice -j 0 --memfree 100G \
 bash $script_prepinput {} ;} 2>> $log
 
 echo -e "### Download of tar.gz files ends at $(date) ###\n" >> $log

@@ -7,7 +7,6 @@ US-Nca	US-Nca
 US-Haw	US-Haw
 US-Col	US-Col
 California-CA	US-CAOx
-British-Columbia-BC	CA-BCSu
 BR-Pal	BR-Pal
 Trento-TR	IT-Tre2
 IT-Tre	IT-Tre

@@ -10,7 +10,7 @@ echo -e "### Contamination check starts at $(date) ###\n" >> $log
 
 { time cat $sample_names \
 | tr '\t' '\n' \
-| parallel --no-notice -j 0 \
+| parallel --no-notice -j 0 --memfree 50G \
 bash $script_runclark {} 1>> $log ;} 2>> $log
 
 echo -e "### Contamination check ends at $(date) ###\n" >> $log
