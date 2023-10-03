@@ -66,13 +66,13 @@ for sp in spnames_order:
             if i > 0:
                 line = line.strip().split('\t')
                 species = line[0]   # Drosophila species
-                assn_ratio = '{:.2e}'.format(float(line[2])*100) # % of sequences assigned to each Drosophila species (among all the assigned sequences)
+                assn_ratio = '{:.2f}'.format(float(line[2])*100) # % of sequences assigned to each Drosophila species (among all the assigned sequences)
                 assign_ratio2species[species] = assn_ratio
             i += 1
         
     for species in order_allspecies:
         if not species in assign_ratio2species:
-            assign_ratio2species[species] = '{:.2e}'.format(0)  # if the species is not in the list of species compared to, assign 0% contamination ratio
+            assign_ratio2species[species] = '{:.2f}'.format(0)  # if the species is not in the list of species compared to, assign 0% contamination ratio
 
     colvals = [sp, sp_collectors[sp]] + list(assign_ratio2species[species] for species in order_allspecies)
     for col in range(len(colvals)):
