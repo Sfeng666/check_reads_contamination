@@ -17,7 +17,7 @@ worksheet = workbook.add_worksheet('Table S2') # create a worksheet for each env
 center_format = workbook.add_format({'align': 'center'}) # set the format for center alignment
 
 row = 0
-header_1 = ['Sample name', 'Collector', '%\ of sequences assigned to different Drosophila species (among all the assigned sequences)']
+header_1 = ['Sample name', 'Collector', '%\ of sequences assigned to different Drosophilid species']
 for col in range(len(header_1)):
     worksheet.write(row, col, header_1[col], center_format) # write first header
 row += 1
@@ -42,8 +42,10 @@ with open(dir_in_spname_order, 'r') as f:
 with open(dir_in_species_list, 'r') as f:
     list_species = f.readline().strip().split('\t')
 list_species_start = ['Dsuzu', 'Dsubp', 'Dimmi']  # prioritize these species for the summary table
-order_otherspecies = sorted(set(list_species) - set(list_species_start))  # sort species that are not prioritized alphebetically
-order_allspecies = list_species_start + order_otherspecies    # order of species in the summary table
+## delete species name in list_species_start from list_species, so that its orginal order is preserved (except for the prioritized species)
+for sp in list_species_start:
+    list_species.remove(sp)
+order_allspecies = list_species_start + list_species    # order of species in the summary table
 
 ## write the secondary header for the summary table
 for col in range(header_1[:2]):

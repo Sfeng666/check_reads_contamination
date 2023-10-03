@@ -41,7 +41,7 @@ if [ ! -e "res_clark/$id.csv.gz" ]; then
   ##CLARK analysis
   ####################
 
-  $clark -T target_clean.txt -D ./droso_clean_db -O $dirfq"/"$id'.fasta' -R $id -n 1 -m 0 -s 2
+  $clark -T target_clean.txt -D ./droso_clean_db -O $dirfq"/"$id'.fasta' -R $id -n 16 -m 0 -s 2
 
   date
 

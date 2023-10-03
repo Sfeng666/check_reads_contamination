@@ -1,1 +1,1 @@
-This is to check the proportion of mapped reads used in our analyses that are contaminated by other Drosophila and non-Drosophila species.
+This is to check the proportion of post-realignment reads used in our analyses that are contaminated by other Drosophila and non-Drosophila species.
