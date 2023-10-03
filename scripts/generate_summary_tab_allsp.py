@@ -48,7 +48,7 @@ for sp in list_species_start:
 order_allspecies = list_species_start + list_species    # order of species in the summary table
 
 ## write the secondary header for the summary table
-for col in range(header_1[:2]):
+for col in range(2):
     worksheet.merge_range(row, col, row - 1, col, header_1[col], center_format)
 for col in range(2, len(order_allspecies) + 2):
     worksheet.write(row, col, order_allspecies[col], center_format)
