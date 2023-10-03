@@ -51,7 +51,7 @@ order_allspecies = list_species_start + list_species    # order of species in th
 for col in range(2):
     worksheet.merge_range(row, col, row - 1, col, header_1[col], center_format)
 for col in range(2, len(order_allspecies) + 2):
-    worksheet.write(row, col, order_allspecies[col], center_format)
+    worksheet.write(row, col, order_allspecies[col - 2], center_format)
 row += 1
 
 # 4. get the contamination ratio for each sample
