@@ -1,5 +1,5 @@
 US-Wis	US-Wis
-Wisconsin-WI	US-WIOr
+Wisconsin-WI	US-Wis2
 US-Wat	US-Wat
 US-Sok	US-Sok
 US-Sdi	US-Sdi
