@@ -33,10 +33,13 @@ with open(dir_in_spname, 'r') as f:
 spnames_order = []
 sp_collectors = {}
 with open(dir_in_spname_order, 'r') as f:
+    i = 0
     for line in f:
-        line = line.strip().split('\t')
-        spnames_order.append(line[0])
-        sp_collectors[line[0]] = line[1].strip('"')
+        if i > 0:
+            line = line.strip().split('\t')
+            spnames_order.append(line[0])
+            sp_collectors[line[0]] = line[1].strip('"')
+        i += 1
 
 # 3. get the list of species that are compared to and order them by priority
 with open(dir_in_species_list, 'r') as f:
