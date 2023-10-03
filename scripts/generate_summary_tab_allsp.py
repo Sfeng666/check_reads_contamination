@@ -60,7 +60,7 @@ row += 1
 # 4. get the contamination ratio for each sample
 for sp in spnames_order:
     assign_ratio2species = {}
-    with open(dir_in_tab.format(sp), 'r') as f:
+    with open(dir_in_tab.format(dic_spname[sp]), 'r') as f:
         i = 0
         for line in f:
             if i > 0:
